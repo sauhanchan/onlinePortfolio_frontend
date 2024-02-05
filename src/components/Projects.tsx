@@ -28,7 +28,8 @@ const Projects = () => {
   const [data, setData] = useState<Data[]>([]);
 
   useEffect(() => {
-    const apiUrl = "http://localhost:8082"; //*1/2 Need to change this (& mark notes in app.tsx 2+7 server + data render)
+    ////cm for deployment:const apiUrl = "http://localhost:8082"; //*1/2 Need to change this (& mark notes in app.tsx 2+7 server + data render)
+    const apiUrl = "https://jconlineportfoliobe.onrender.com"; //#Only need to change this link
 
     axios
       .get<Data[]>(`${apiUrl}/api/itprojects`) //*2/2 Need to change this also for connecting to another db (all notes here)

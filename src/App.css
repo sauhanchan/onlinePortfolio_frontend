@@ -302,7 +302,7 @@ font-weight: bold;
     position: fixed;
     bottom: 16px;
     right: 16px;
-    z-Index: 1000;
+    z-index: 1000;
 }
 
 a{
