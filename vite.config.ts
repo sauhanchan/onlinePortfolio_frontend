@@ -8,5 +8,7 @@ export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   build: {
     outDir: 'dist', // Adjust the output directory as needed
+    assetsDir: '', //3rd commit 1ch
   },
+  base: '/',  //3rd commit 2ch
 })
