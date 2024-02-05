@@ -1,0 +1,900 @@
+/*#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}*/ /*Original css*/
+
+.zindexCustomTop {
+  position: relative;
+  z-index: 100 !important;
+  font-weight: bold;
+  margin-bottom: 0;
+  border: none;
+  border-radius: 0;
+  background-color: rgb(166, 225, 225);
+}
+
+.zindexCustomCarousel{
+  z-index: 0;
+  border: none;
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+
+
+
+
+
+
+/**/
+
+.product-grid{
+  /*font-family: sans-serif;*/
+  text-align: center;
+  transition: all 0.7s ease 0s;
+}
+.product-grid:hover{ box-shadow: 0 0 5px rgba(0,0,0,0.10),3px 3px rgba(0,0,0,0.05); }
+.product-grid .product-image{
+  overflow: hidden;
+  position: relative;
+}
+.product-grid .product-image a.image{ display: block; }
+.product-grid .product-image img{
+  width: 100%;
+  height: auto;
+}
+.product-grid .product-image .pic-1{ transition: all 100ms ease 0s; }
+.product-grid .product-image:hover .pic-1{ opacity: 0; }
+.product-grid .product-image .pic-2{
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 2.5s;
+}
+.product-grid .product-image:hover .pic-2{
+  opacity: 1;
+  transform: scale(1.2);
+}
+.product-grid .product-hot-label{
+  color: #fff;
+  background: rgb(31, 199, 199);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 7px 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.product-grid .product-links{ /*@animated banner part*/
+  background: rgb(220, 250, 250);
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  opacity: 0;
+  transform: scaleX(2);
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  transition: all 0.5s ease-in-out 0s;
+}
+.product-grid:hover .product-links{
+  opacity: 1;
+  transform: scaleX(1);
+  bottom: 0;
+}
+.product-grid .product-links li{
+  margin: 0 0px;
+  display: inline-block;
+} /*@animated banner*/
+.product-grid .product-links li a{
+  color: rgb(25, 170, 170);
+  font-size: 16px;
+  line-height: 41px;
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: relative;
+  transition: all .2s ease-out;
+}
+.product-grid .product-links li a:hover{
+  color: #fff;
+  background-color: rgb(25, 170, 170);
+  cursor: pointer;
+}/*@faEye animated part*/
+.product-grid .product-links li a:before,
+.product-grid .product-links li a:after{
+  content: attr(data-tip);
+  color: #fff;
+  background-color: rgb(95, 231, 231);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  padding: 5px 10px;
+  white-space: nowrap;
+  display: none;
+  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: -40px;
+  transition: all 0.3s;
+}
+.product-grid .product-links li a:after{
+  content: '';
+  height: 10px;
+  width: 10px;
+  transform: translateX(-50%) rotate(45deg);
+  top: -25px;
+  z-index: -1;
+}
+.product-grid .product-links li a:hover:before,
+.product-grid .product-links li a:hover:after{
+  display: block;
+}
+.product-grid .product-content{
+  background: linear-gradient(110deg, #ffffff 50%, rgb(243, 250, 250) 50%);
+  padding: 10px 10px;
+  position: relative;
+}/**/
+.product-grid .add-to-cart{
+  color: rgb(25, 170, 170);
+  font-size: 15px;
+  font-weight: 600;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 9px;  /*@Website link display position*/
+  left: 50%;
+  opacity: 0;
+  transition: all 1s ease 0s;
+}
+.product-grid:hover .add-to-cart{ opacity: 1; }
+.product-grid .add-to-cart .faMyBrandStyle{
+  font-size: 13px;
+  margin: 0 3px 1px 0;
+}
+.product-grid .title{
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin: 1px 0 3px;  /*@animated learn more, OR product name actually*/
+  transition: all 0.3s ease 0s;
+}
+.product-grid .title a{ color: rgb(27, 139, 139); }
+.product-grid:hover .title{ opacity: 0; }
+.product-grid .rating{
+  color: #1c1a19;
+  font-size: 12px;
+  padding: 0;
+  margin: 0 0 2px; /*11px*/
+  list-style: none;
+}
+.product-grid .price{
+  font-size: 12px;
+  font-weight: 600;
+  padding-top: 2px;
+  
+}
+@media screen and (max-width: 990px){
+  .product-grid{ margin: 0 0 30px; }
+}
+
+/*--*/    
+.row{
+  margin: auto;
+}
+/**/
+
+.headingClass{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 10px;
+}
+
+.textJustifyClass{
+  text-align: justify;
+}
+
+/*#for setting footer's position: bottom*/
+.bodyClass{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.wrapper {
+  flex: 1;
+}
+/**/
+
+/*Footer style*/
+footer{
+  background-color: rgb(15,104,112);
+  font-size: small;
+  color: rgb(215, 238, 243);
+}
+
+.footerA{
+  color: white;
+}
+.footerA:hover{
+  color: rgb(133, 226, 226);
+}
+/**/
+
+.customAlertLink{
+  color:rgb(27, 139, 139);
+}
+
+.customAlertLink:hover{
+  color:rgb(234, 248, 157);
+}
+
+.alertCloseBtn{
+background-color: transparent;
+border:none;
+border-radius: 5px;
+padding: 4px;
+font-weight: bold;
+}
+
+.alertCloseBtn:hover{
+    background-color: transparent;
+}
+
+.custom-tooltip {
+  text-align: justify;
+  vertical-align: middle;
+  --bs-tooltip-bg: rgb(61, 156, 156); /*For the whole tooltips including the arrow*/
+  height: 25px;
+}
+
+.custom-tooltip .tooltip-inner {
+  padding: 3px 8px 3px 8px; /* Adjust padding as needed */
+}
+
+.contactButtonClass{
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-Index: 1000;
+}
+
+a{
+  text-decoration: none;
+  color:rgb(36, 179, 179);
+}
+
+a:hover{
+  color: rgb(133, 226, 226);
+}
+
+/*Overlay effect for service page*/
+.overlay-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  background-color: rgba(253, 253, 253, 0.60);
+}
+
+
+.image-zoom-in{
+  transition: transform 0.3s ease-in-out;
+}
+.overlay-container:hover .image-zoom-in{
+  transform: scale(1.1);
+}
+
+/**/
+.closeBtnStyle{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; /**/
+  text-align: center;
+  padding: 0;
+  margin-left: auto;
+  font-size: 8px;
+  font-weight: bold;
+  background-color: rgb(200, 196, 196);
+  border: none;
+  position: relative;
+}
+
+.cross {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #383838;
+  opacity: 1;
+}
+
+.crossBtn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-50%, -50%);
+  color: #e71d1d;
+  opacity: 1;
+  z-index: 30000;
+}
+
+/*Testimonial*/
+#testimonialCard{
+  background: linear-gradient(110deg, #ffffff 50%, rgb(232, 253, 253) 50%);
+  max-width: 90%;
+  margin: auto;
+}
+#testimonialCard .carousel-caption {
+  position: initial;
+  z-index: 10;
+  padding: 2rem 7rem;
+  color: rgba(78, 77, 77, 0.856);
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: bolder;
+  line-height: 2rem;
+}
+@media(max-width:767px){
+  #testimonialCard .carousel-caption {
+      position: initial;
+      z-index: 10;
+      padding: 2rem 3rem;
+      color: rgba(78, 77, 77, 0.856);
+      text-align: justify;
+      font-size: 0.7rem;
+      font-style: italic;
+      font-weight: bolder;
+      line-height: 1.5rem;
+  }
+}
+#testimonialCard .carousel-caption img{
+  width: 6rem;
+  border-radius: 5rem;
+  margin-top: 2rem;
+}
+@media(max-width:767px){
+  #testimonialCard .carousel-caption img{
+      width: 4rem;
+      border-radius: 4rem;
+      margin-top: 1rem;
+  }
+}
+#testimonialCard #testimonialName{
+  font-style: normal;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+@media(max-width:767px){
+  #testimonialCard #testimonialName{
+      font-style: normal;
+      font-size: 0.6rem;
+      margin-top: 0.5rem;
+      text-align: center;
+  }
+}
+#testimonialCard .prevNextStyle{
+  background-color: rgb(166, 225, 225);
+  padding: 1.4rem;
+}
+@media(max-width:767px){
+  #testimonialCard .prevNextStyle{
+      padding: 0.8rem;
+  }
+}
+#testimonialCard .carousel-control-prev{
+  justify-content: flex-start;
+}
+
+#testimonialCard .carousel-control-next {
+  justify-content: flex-end;
+}
+#testimonialCard .carousel-control-prev, #testimonialCard .carousel-control-next{
+  transition: none;
+  opacity: unset;
+}
+/**/
+
+/*For the overlayProductPage*/
+/**/
+.overlayProductInfo {
+  position: fixed; /* Sit on top of the page content */
+  display: block; /* Hidden by default */
+  width: 80%; /* Full width (cover the whole page) */
+  height: 80%; /* Full height (cover the whole page) */
+  top: 10%;
+  left: 10%;
+  overflow: auto;
+  text-align: center;
+  display: flex-column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.6); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  color: white;
+}
+
+/*Overlay Project table*/
+.overlayProjTable{
+  border: none;
+  
+}
+
+.overlayProjTable tr,.overlayProjTable td,.overlayProjTable th{
+  border: solid 2px #fff;
+  
+  padding: 5px 10px;
+  background-color: rgb(241, 255, 255);
+  color: #fff;
+  text-align: justify;
+  font-weight: 500;
+  color: rgb(3, 30, 30);
+}
+
+.overlayProjTable th{
+  background-color: rgb(117, 172, 172);
+  color: white;
+  text-align: left;
+}
+/**/
+/**/
+.showAllHideAllStyle:hover{
+  cursor: pointer;
+}
+.showAllHideAllStyle{
+  font-size: 11px;
+}
+/**/
+/**/
+.fontIconHover{
+  cursor: pointer;
+}
+/**/
+
+/**/
+
+/**/
+.nav-link{
+  border-bottom: rgb(255,255,255) solid 2px;
+  width: 50%;
+}
+.nav-link:hover{
+  color: rgb(133, 226, 226) !important;
+  transition: color 0.4s;
+  transition: border-color 0.4s;
+  border-bottom: rgb(133, 226, 226) solid 2px;
+
+}
+
+/**/
+/*For navbar*/
+.fontIcon{
+  font-size:23px;
+  color: grey;
+  margin-right: -5px;
+}
+.fontIcon:hover{
+  color: rgb(133, 226, 226);
+}
+/**/
+
+
+/*For the divider with a title*/
+.line-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  z-index: 2000;
+}
+
+.line {
+  flex-grow: 1;
+  border-bottom: 3.5px solid rgb(201, 202, 202); /* Adjust the color and thickness as needed */
+  border-top: 1.5px solid rgb(162, 163, 163); /* Adjust the color and thickness as needed */
+  height: 7px;
+
+}
+
+.text {
+  padding: 0 15px; /* Adjust the padding as needed */
+  letter-spacing: 4px;
+}
+/**/
+
+/*For the project area on the homepage*/
+.projectArea{
+  background: linear-gradient(9deg, #ffffff 50%, rgb(213, 248, 248) 50%);
+  padding: 1px 0;
+}
+
+.overlay-containerProjects {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-containerProjects:hover .overlayProjects {
+  opacity: 0;
+}
+
+.overlayProjects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+/*background-color: rgba(64, 63, 63, 0.6); */
+  background: radial-gradient(circle, rgba(64, 63, 63, 0.5), rgba(64, 63, 63, 0.7));
+}
+
+/**/
+/*For fieldset on the homepage*/
+fieldset{
+  border-right: solid 0px rgba(64, 63, 63, 0.3);
+  border-left: solid 30px rgb(123, 174, 174);
+  background: linear-gradient(110deg, #ffffff 50%, rgb(243, 250, 250) 50%);
+
+}
+/**/
+/*For banners on homepage*/
+.bannerHomepageSm {
+  display: none;
+}
+/**/
+/*For slider on homepage*/
+/*
+.containerSkillBar {
+  overflow: hidden;
+  .slider {
+    animation: slidein 10s linear infinite; 
+    white-space: nowrap;
+    .logos {
+      width: 100%;
+      display: inline-block;
+      margin: 0px 0;
+      .fontAwesomeLogo {
+        width: calc(100% / 6);
+        animation: fade-in 0.5s 
+          cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+      }
+    }
+  }
+}
+
+@keyframes slidein {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+*/
+/**/
+/*For the skills bar on the homepage*/
+#multiItemCarousel .buttonPrevNext:hover{
+  filter: invert(1);
+}
+#multiItemCarousel .buttonPrevNext:hover{
+  filter: invert(1);
+}
+
+#multiItemCarousel .buttonPrevNext{
+opacity: 20%;
+width: 7%;
+}
+
+/**/
+
+/*For all buttons*/
+button{
+background-color: rgb(27, 139, 139);
+border:none;
+border-radius: 5px;
+padding: 4px 4px;
+font-weight: bold;
+color: white;
+width: 150px;
+}
+
+button:hover{
+  background-color: rgb(133, 226, 226);
+}
+
+.buttonNav{
+/*border:solid 2px #eee;*/
+border: none;
+border-radius: 5px;
+padding: 4px 7px;
+font-weight: normal;
+color: white;
+width: auto;
+}
+
+.buttonNav:hover{
+  background-color: transparent;
+}
+
+.buttonPrevNext{
+ border: none;
+}
+
+.buttonPrevNext:hover{
+  background-color: transparent;
+}
+/**/
+/*
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}*/
+/*About page*/
+/*General*/
+.eachDivMargin div{
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.eachDivMargin div img, .eachDivMargin div FontAwesomeIcon{
+  padding-right: 6px;
+}
+
+.checkOutRect{
+  background-color: rgb(207, 236, 236);
+  box-shadow: 0 0 3px rgba(0,0,0,0.10),2px 2px rgba(0,0,0,0.10);
+}
+/**/
+/*About table*/
+table{
+  border: none;
+}
+
+tr, td, th{
+  border: solid 4px #fff;
+  padding: 5px 10px;
+  background-color: rgb(241, 255, 255);
+}
+
+th{
+  background-color: rgb(188, 239, 239)
+}
+/**/
+/**/
+.projectAreaRight{
+  background: linear-gradient(90deg, #ffffff 50%, rgb(243, 250, 250) 50%);
+  padding: 1px 0;
+  z-index: 0;
+}
+.projectAreaLeft{
+  background: linear-gradient(90deg, rgb(243, 250, 250) 50%,#ffffff 50%);
+  padding: 1px 0;
+  z-index: 0;
+}
+/**/
+
+/*Rect for About page*/
+.containerRect {
+  position: relative; /*To set relative positioning for the container */
+  z-index: 0;
+}
+
+.backgroundRectLeft {
+  position: absolute; /*Absolute positioning the rectangle within the container*/
+  top: 0; /* Align to the top of the container */
+  left: 0; /* Align to the left side of the container */
+  height: 100%; /* Full height of the container */
+  width: 10%; /* Adjust the width as needed */
+  background-color: rgb(188, 239, 239); /* Background color of the rectangle */
+  margin-right: 10px;
+}
+
+.contentRectLeft{
+  margin-left: 0px;
+  padding-left: 11%;
+  text-align: justify;
+}
+
+.backgroundRectRight {
+  position: absolute; /*Absolute positioning the rectangle within the container*/
+  top: 0; /* Align to the top of the container */
+  right: 0; /* Align to the left side of the container */
+  height: 100%; /* Full height of the container */
+  width: 10%; /* Adjust the width as needed:*//* 100px */
+  background-color: rgb(188, 239, 239); /* Background color of the rectangle */
+  margin-left: 10px; /**/
+}
+
+.contentRectRight{
+  /*margin-right: 100px;*/
+  
+  position: relative;
+  z-index: 2;
+}
+
+.overlay-containerAbout {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-containerAbout:hover .overlayAbout {
+  opacity: 1;
+}
+
+.overlayAbout {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/**/
+.faMyBrandStyle{
+  color: rgb(27, 139, 139);
+}
+/**/
+
+/* Custom CSS for column widths */
+@media (min-width: 1200px) {
+  .custom-lg-width {
+    width: 70%;
+  }
+  .mobileDisplayNoneLgMd{
+    display: none;
+  }
+  .overlayAbout {
+    left: auto;
+    right: 0;
+    transform: translate(0, -50%);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .custom-md-width {
+    width: 70%;
+  }
+  .mobileDisplayNoneLgMd{
+    display: none;
+  }
+}
+
+@media (min-width: 420px) and (max-width: 991.98px){
+  .custom-sm-width {
+    width: 90%;
+  }
+  .mobileDisplayNoneLgMd{
+    display: none;
+  }
+}
+
+@media (max-width: 419.98px) {
+  .overlay{
+    opacity: 1;
+    background-color: rgba(253, 253, 253, 0.30);
+  }
+
+  .mobileStyle{
+    color: white !important;
+    position: relative !important;
+    top:20% !important;
+    text-shadow: #1a1919 2px 2px 3px;
+  }
+
+  .fontAwesomeIconColor{
+    color: white;
+    filter:drop-shadow(2px 2px 3px #1a1919);
+  }
+
+  .mobileDisplayNone{
+    display: none;
+  }
+
+  .mobileDisplayBlock{
+    display: block;
+  }
+
+  .projectArea{
+    background: none;
+    padding: 0px 0;
+  }
+
+  .backgroundRectLeft{
+    width: 5%;
+  }
+  .contentRectLeft{
+    padding-left: 7%;
+  }
+
+  .backgroundRectRight{
+    width: 5%; /*15px*/
+  }
+  .contentRectRight{
+    padding-right: 7%; /*15px*/
+  }
+/*mobile banner testing*/
+  .bannerHomepageSm {
+    display: inline;
+  }
+
+  .bannerHomepageMdLg{
+    display:none;
+  }
+
+  .overlayProjects {
+    background: linear-gradient(110deg, rgba(64, 63, 63, 0.5) 50%, rgba(64, 63, 63, 0.7) 50%);
+    background: linear-gradient(105deg, rgba(56, 74, 74, 0.4) 50%, rgba(201, 250, 250, 0.4)  50%);
+
+    
+  }
+
+}
+
