@@ -112,12 +112,8 @@ const OverlayProduct = ({ item, setOverlayClose }: Props) => {
     <>
       <div className="overlayProductInfo p-4 text-center">
         <CrossBtn closeFunction={setOverlayClose} btnCss="crossBtn mt-3 ml-4" />
-        <a href={`/public/${item.image[1]}`} target="_blank">
-          <img
-            src={`../public/${item.image[1]}`}
-            width="90%"
-            className="img-fluid"
-          ></img>
+        <a href={item.image[1]} target="_blank">
+          <img src={item.image[1]} width="90%" className="img-fluid"></img>
         </a>
         <h3 className="pt-3 pb-1">Title: {item.title}</h3>
         <div className="d-flex justify-content-end">

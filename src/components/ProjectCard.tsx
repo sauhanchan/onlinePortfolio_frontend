@@ -49,8 +49,8 @@ const ProjectCard = ({ item }: Props) => {
               style={{ cursor: "pointer" }}
               className="image"
             >
-              <img className="pic-1" src={`../public/${item.image[0]}`} />
-              <img className="pic-2" src={`../public/${item.image[1]}`} />
+              <img className="pic-1" src={item.image[0]} />
+              <img className="pic-2" src={item.image[1]} />
             </a>
             {item.displayLbl && (
               <span className="product-hot-label">{item.labelContent}</span>
