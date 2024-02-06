@@ -68,8 +68,8 @@ const Footer = () => {
             <img src="shLogo.png" width="100" />
           </a>
           <span
-            className="mobileDisplayNone fs-4 ps-4"
-            style={{ fontFamily: "Monotype Corsiva" }}
+            className="mobileDisplayNone fs-6 ps-4"
+            style={{ fontFamily: "Lucida Handwriting" }}
           >
             Web & Software Development
           </span>

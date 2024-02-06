@@ -33,12 +33,12 @@ interface Props {
   setOverlayClose: () => void;
 }
 const OverlayProduct = ({ item, setOverlayClose }: Props) => {
-  const [arrowTypeVisibility, setArrowTypeVisible] = useState(false);
-  const [arrowLangVisibility, setArrowLangVisible] = useState(false);
-  const [arrowLibFrVisibility, setArrowLibFrVisible] = useState(false);
-  const [arrowToolVisibility, setArrowToolVisible] = useState(false);
-  const [arrowSkillVisibility, setArrowSkillVisible] = useState(false);
-  const [arrowDescVisibility, setArrowDescVisible] = useState(false);
+  const [arrowTypeVisibility, setArrowTypeVisible] = useState(true);
+  const [arrowLangVisibility, setArrowLangVisible] = useState(true);
+  const [arrowLibFrVisibility, setArrowLibFrVisible] = useState(true);
+  const [arrowToolVisibility, setArrowToolVisible] = useState(true);
+  const [arrowSkillVisibility, setArrowSkillVisible] = useState(true);
+  const [arrowDescVisibility, setArrowDescVisible] = useState(true);
   const [showAllVisibility, setShowAllVisible] = useState(false);
 
   const handleArrowTypeClick = () => {
@@ -140,7 +140,7 @@ const OverlayProduct = ({ item, setOverlayClose }: Props) => {
                 <div>Type:</div>
                 <div onClick={handleArrowTypeClick} className="fontIconHover">
                   <FontAwesomeIcon
-                    icon={arrowTypeVisibility ? faChevronDown : faChevronUp}
+                    icon={arrowTypeVisibility ? faChevronUp : faChevronDown}
                     size="1x"
                   />
                 </div>
@@ -159,7 +159,7 @@ const OverlayProduct = ({ item, setOverlayClose }: Props) => {
                 <div>Languages:</div>
                 <div onClick={handleArrowLangClick} className="fontIconHover">
                   <FontAwesomeIcon
-                    icon={arrowLangVisibility ? faChevronDown : faChevronUp}
+                    icon={arrowLangVisibility ? faChevronUp : faChevronDown}
                     size="1x"
                   />
                 </div>
@@ -178,7 +178,7 @@ const OverlayProduct = ({ item, setOverlayClose }: Props) => {
                 <div>Libraries/Frameworks:</div>
                 <div onClick={handleArrowLibFrClick} className="fontIconHover">
                   <FontAwesomeIcon
-                    icon={arrowLibFrVisibility ? faChevronDown : faChevronUp}
+                    icon={arrowLibFrVisibility ? faChevronUp : faChevronDown}
                     size="1x"
                   />
                 </div>
@@ -197,7 +197,7 @@ const OverlayProduct = ({ item, setOverlayClose }: Props) => {
                 <div>Design/ Dev tool(s):</div>
                 <div onClick={handleArrowToolClick} className="fontIconHover">
                   <FontAwesomeIcon
-                    icon={arrowToolVisibility ? faChevronDown : faChevronUp}
+                    icon={arrowToolVisibility ? faChevronUp : faChevronDown}
                     size="1x"
                   />
                 </div>
@@ -216,7 +216,7 @@ const OverlayProduct = ({ item, setOverlayClose }: Props) => {
                 <div>Skill(s):</div>
                 <div onClick={handleArrowSkillClick} className="fontIconHover">
                   <FontAwesomeIcon
-                    icon={arrowSkillVisibility ? faChevronDown : faChevronUp}
+                    icon={arrowSkillVisibility ? faChevronUp : faChevronDown}
                     size="1x"
                   />
                 </div>
@@ -235,7 +235,7 @@ const OverlayProduct = ({ item, setOverlayClose }: Props) => {
                 <div>Description:</div>
                 <div onClick={handleArrowDescClick} className="fontIconHover">
                   <FontAwesomeIcon
-                    icon={arrowDescVisibility ? faChevronDown : faChevronUp}
+                    icon={arrowDescVisibility ? faChevronUp : faChevronDown}
                     size="1x"
                   />
                 </div>

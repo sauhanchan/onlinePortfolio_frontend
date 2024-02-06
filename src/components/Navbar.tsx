@@ -6,13 +6,13 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
-        <a className="navbar-brand my-2 mx-2 fs-5 fw-bold" href="/">
+        <a className="navbar-brand my-2 mx-2 fs-6 fw-bolder" href="/">
           <img src="shLogo.png" width="70" />
           <span
             className="mobileDisplayNone"
-            style={{ fontFamily: "Monotype Corsiva" }}
+            style={{ fontFamily: "Lucida Handwriting" }}
           >
-            &nbsp;&nbsp;&nbsp;Web & software development
+            &nbsp;&nbsp;Web & software development
           </span>
         </a>
         <button

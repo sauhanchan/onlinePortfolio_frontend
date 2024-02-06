@@ -34,7 +34,7 @@ const Projects = () => {
     axios
       .get<Data[]>(`${apiUrl}/api/itprojects`) //*2/2 Need to change this also for connecting to another db (all notes here)
       .then((response) => {
-        setData(response.data);
+        setData(response.data.sort((a, b) => a.other.localeCompare(b.other)));
       })
       .catch((error) => {
         console.error("Error - Fetching data:", error);

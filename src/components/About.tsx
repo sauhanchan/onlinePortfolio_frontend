@@ -38,8 +38,12 @@ const About = () => {
                 size="2x"
                 className="faMyBrandStyle"
               />
-              <span className="fs-4" style={{ fontFamily: "Monotype Corsiva" }}>
-                My motto: Be open to new ideas
+              {/* <span className="fs-4" style={{ fontFamily: "Monotype Corsiva" }}> */}
+              <span
+                className="fs-6 fw-bolder"
+                style={{ fontFamily: "Lucida Handwriting" }}
+              >
+                &nbsp;My motto: Be open to new ideas
               </span>
             </p>
           </div>
