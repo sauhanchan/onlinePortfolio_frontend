@@ -18,6 +18,7 @@ import Tooltip from "react-bootstrap/Tooltip";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCommenting } from "@fortawesome/free-solid-svg-icons";
 import CrossBtn from "./components/CrossBtn";
+import Project from "./components/Project";
 
 //#Added interface for rendering data 2
 interface Data {
@@ -52,7 +53,7 @@ interface Data {
 
 const App: React.FC = () => {
   //#Added for rendering data 3
-  const [data, setData] = useState<Data[]>([]);
+  //const [data, setData] = useState<Data[]>([]);
 
   //For the contact button2
   const [closeBtnDisplay, setCloseBtnDisplay] = useState(false);
@@ -66,31 +67,31 @@ const App: React.FC = () => {
   };
 
   //#Newly added for server 2/2:
-  useEffect(() => {
-    //#Replace with my server URL (the deployed one) (but since app seems no need to connect to the db, can del actually?)
-    const apiUrl = "http://localhost:8080";
+  // useEffect(() => {
+  //   //#Replace with my server URL (the deployed one) (but since app seems no need to connect to the db, can del actually?)
+  //   const apiUrl = "http://localhost:8080";
 
-    /*
-    axios
-      .get(`${apiUrl}/api/products`) //#Original: /api/data
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.error("Error - Fetching data:", error);
-      });
-    */
+  //   /*
+  //   axios
+  //     .get(`${apiUrl}/api/products`) //#Original: /api/data
+  //     .then((response) => {
+  //       console.log(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error - Fetching data:", error);
+  //     });
+  //   */
 
-    //#Added for rendering data 4
-    axios
-      .get<Data[]>(`${apiUrl}/api/products`)
-      .then((response) => {
-        setData(response.data);
-      })
-      .catch((error) => {
-        console.error("Error - Fetching data:", error);
-      });
-  }, []);
+  //   //#Added for rendering data 4
+  //   axios
+  //     .get<Data[]>(`${apiUrl}/api/products`)
+  //     .then((response) => {
+  //       setData(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error - Fetching data:", error);
+  //     });
+  // }, []);
 
   return (
     <>
@@ -103,6 +104,7 @@ const App: React.FC = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/submission" element={<FormSubmissionResult />} />
           <Route path="*" element={<Error />} />
+          <Route path="/project" element={<Project />} />
         </Routes>
       </Router>
 

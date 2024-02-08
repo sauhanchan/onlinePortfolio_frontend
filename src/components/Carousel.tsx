@@ -32,6 +32,29 @@ const Carousel = () => {
 
       <div className="carousel-inner">
         <div className="carousel-item active">
+          <a href="services">
+            <div className="bannerHomepageMdLg">
+              <img
+                src="homepageBannerServices_MdLg.png"
+                className="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div className="bannerHomepageSm">
+              <img
+                src="homepageBannerServices_mobile.png"
+                className="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </a>
+          <div className="carousel-caption d-none d-md-block">
+            <a href="services" className="d-block">
+              <button className="my-3">Services</button>
+            </a>
+          </div>
+        </div>
+        <div className="carousel-item">
           <a href="about">
             <div className="bannerHomepageMdLg">
               <img
@@ -56,29 +79,7 @@ const Carousel = () => {
             </a>
           </div>
         </div>
-        <div className="carousel-item">
-          <a href="services">
-            <div className="bannerHomepageMdLg">
-              <img
-                src="homepageBannerServices_MdLg.png"
-                className="d-block w-100"
-                alt="..."
-              />
-            </div>
-            <div className="bannerHomepageSm">
-              <img
-                src="homepageBannerServices_mobile.png"
-                className="d-block w-100"
-                alt="..."
-              />
-            </div>
-          </a>
-          <div className="carousel-caption d-none d-md-block">
-            <a href="services" className="d-block">
-              <button className="my-3">Services</button>
-            </a>
-          </div>
-        </div>
+
         <div className="carousel-item">
           <a href="projects">
             <div className="bannerHomepageMdLg">

@@ -26,7 +26,7 @@ interface Data {
   tool: string;
   skill: string;
   other: string;
-  __v: Number;
+  //__v: Number;
 }
 
 interface Props {
